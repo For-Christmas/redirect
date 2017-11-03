@@ -1,7 +1,7 @@
 <div id="content">
 </div>
 <script>
-if(window.location.hash) {
-  window.top.location.href = "https://forchristmas.herokuapp.com/"+window.location.hash;
-}
+  var urlhash = window.location.hash || "";
+  window.top.location.href = "https://forchristmas.herokuapp.com/"+urlhash;
+  document.getElementById("content").innerHTML = "<h1>Click <a href=\""+"https://forchristmas.herokuapp.com/"+urlhash+"\">here</a> if you see this text</h1>;
 </script>
